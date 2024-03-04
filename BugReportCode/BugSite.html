@@ -1,0 +1,49 @@
+<!-- Exercise 8-3 - HTML File to get bug information-->
+<!-- Thaine Koen, 8/24/2023 -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bug Report</title>
+</head>
+<body>
+<h1>Bug Report</h1>
+
+<form name="bugSite" action="BugReport.php" method="post">
+
+  <p>Product Name: <input type="text" name="prodName" placeholder="Razer Mouse" maxlength="25"/></p>
+  <p>Version: <input type="text" name="version" placeholder="2.0" maxlength="10"/></p>
+  <p>Hardware Type: <input type="text" name="hardware" placeholder="Monitor"maxlength="10"/></p>
+  <p>Operating System:
+    <select name = "osList">
+      <option value = "Windows">Windows</option>
+      <option value = "Mac">Mac</option>
+      <option value = "Linux">Linux</option>
+      <option value = "Other">Other</option>
+    </select>
+  <p/>
+  <p>Frequency of Occurrence:
+    <select name = "ocurrList">
+      <option value = "Low Frequency">Low Frequency</option>
+      <option value = "Medium Frequency">Medium Frequency</option>
+      <option value = "High Frequency">High Frequency</option>
+    </select>
+  <p/>
+  <p>
+    <label for="solution">Proposed solutions:</label><br>
+    <textarea id="solution" name="solution" rows="3" cols="50" maxlength="100"></textarea><br><br>
+  </p>
+  <p>Bug # to update <br>(if updating a bug **See Bug Report**)<br> <input type="number" name="bugNumber"/></p>
+  <p>
+    <input type="submit" name="bugSubmit" value="Submit Bug"/>&nbsp
+    <input type="submit" name="update" value="Update Bug Report"/>&nbsp
+    <input type="submit" name="delete" value="Delete Bug (selected Bug #)"/>&nbsp
+    <input type="submit" name="seeBugs" value="See Bug Report"/>&nbsp
+    <input type="reset" value="Clear Form"/>
+  </p>
+</form>
+
+</body>
+</html>
